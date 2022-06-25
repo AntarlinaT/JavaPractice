@@ -1,0 +1,57 @@
+package AshishGupta.DSALGO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StackExample {
+	
+	List<Integer> list = new ArrayList<>();
+	
+	//push in Arraylist
+	public void push(int num) {
+		list.add(num);
+		
+	}
+	
+	public void addFirst() {
+		list.add(list.size()-1);
+	}
+	
+	public void addLast() {
+		list.add(0);
+	}
+	
+	public void addAtPosition(int index, int num) {
+		
+		list.add(index, null);
+		
+	}
+	
+	public void peek() {
+		System.out.println(list.get(list.size()-1));
+		
+	}
+	
+	public Integer pop() {
+		Integer top = list.get(list.size()-1);
+		list.remove(list.size()-1);
+		return top;
+		
+	}
+	
+	public Integer popLast() {
+		//Integer num = list.set(0, null)
+		return list.remove(0);
+	}
+	
+	public Integer popAtPosition(int index) {
+		Integer num = list.get(index);
+		list.remove(index);
+		return num;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
