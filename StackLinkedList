@@ -1,0 +1,45 @@
+package AshishGupta.DSALGO;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class StackLinkedList {
+
+	List<Integer> list = new LinkedList<>();
+
+	public void add(int num) {
+		list.add(num);
+
+	}
+	
+	public void addNodeAtFirst(int num) {
+		list.add(0, num);
+	}
+	
+	public void addNodeAtLast(int num) {
+		list.add(list.size()-1,num);
+	}
+	
+	public void peek() {
+		list.get(list.size()-1);
+		
+	}
+	
+	public Integer popAtFirst() {
+		Integer num = list.get(0);
+		list.remove(0);
+		 return num;
+	}
+	
+	public Integer popAtLast() {
+		Integer num = list.size()-1;
+		list.remove(list.size()-1);
+		return num;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
